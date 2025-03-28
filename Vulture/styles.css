@@ -1,0 +1,47 @@
+/* Styles generated using Grok3 */
+/* Reset some defaults and set the Vulture-inspired background */
+body {
+  background-color: #1a1a1a; /* Dark gray, like Vulture's suit */
+  color: #d4d4d4; /* Light gray text for readability */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-image: linear-gradient(45deg, #2a2a2a, #1a1a1a);
+}
+
+/* Style the list container */
+#display {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+  max-width: 600px; /* Keep it compact */
+  margin: 0 auto; /* Center it */
+  border: 2px solid #3d5a2b; /* Dark green border, Vulture's wing vibe */
+  border-radius: 5px;
+  background-color: #252525; /* Slightly lighter dark background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+/* Style each list item */
+#display li {
+  padding: 15px;
+  border-bottom: 1px solid #3d5a2b; /* Greenish divider */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Last item doesn’t need a bottom border */
+#display li:last-child {
+  border-bottom: none;
+}
+
+/* Hover effect inspired by Vulture’s menacing presence */
+#display li:hover {
+  background-color: #3d5a2b; /* Dark green highlight */
+  color: #ffffff; /* White text on hover */
+}
+
+/* Optional: Add a subtle "wing-like" flair to the text */
+#display li::before {
+  content: "🦤"; /* Bat emoji as a nod to Vulture’s wings */
+  margin-right: 10px;
+  color: #6b8e23; /* Olive green for the wings */
+}
