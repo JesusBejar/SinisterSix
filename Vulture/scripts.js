@@ -5,15 +5,15 @@ fetch("https://jsonplaceholder.typicode.com/users")
   .then((response) => response.json())
   // handle data
   .then((data) => {
-    let content = "";
     data.forEach((user) => {
-      // log data (then inject into html)
+      // log data (then inject into html dynamically)
       // console.log(data);
       const { name, email, address } = user;
       // returns all users
-      content += `<li> ${name}, ${email}, ${address.city} </li>`;
+      const li = document.createElement("li");
+      li.textContent += `${name}, ${email}, ${address.city}`;
+      list.appendChild(li);
     });
-    list.innerHTML = content;
   })
   // error handling
   .catch((error) => {
