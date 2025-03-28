@@ -1,3 +1,4 @@
+const list = document.querySelector("#display");
 // make function w/ async + await
 async function getData() {
   // start try-catch
@@ -6,8 +7,14 @@ async function getData() {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
     // parse reponse
     const data = await response.json();
-    // log data
-    console.log(data);
+    // inject data into html
+    let content = "";
+    data.forEach((user) => {
+      const { name, email, address } = user;
+      //   console.log(name, email, address);
+      content += `<li> ${name}, ${email}, ${address.city} </li>`;
+    });
+    list.innerHTML = content;
     // error handling
   } catch (error) {
     // log error
