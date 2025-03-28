@@ -7,14 +7,16 @@ async function getData() {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
     // parse reponse
     const data = await response.json();
-    // inject data into html
-    let content = "";
+    // inject data into html dynamically
     data.forEach((user) => {
       const { name, email, address } = user;
       //   console.log(name, email, address);
-      content += `<li> ${name}, ${email}, ${address.city} </li>`;
+      //   create element
+      const li = document.createElement("li");
+      li.textContent = `${name}, ${email}, ${address.city}`;
+      //   append to list
+      list.appendChild(li);
     });
-    list.innerHTML = content;
     // error handling
   } catch (error) {
     // log error
