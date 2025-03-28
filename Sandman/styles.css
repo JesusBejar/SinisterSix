@@ -1,0 +1,37 @@
+/* styles generated using Grok3 */
+/* Reset default list styles for a clean look */
+#display {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px auto; /* Changed from '20px' to '20px auto' */
+  background: linear-gradient(to bottom, #d2b48c, #c19a6b);
+  border: 2px solid #8b5a2b;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+}
+
+/* Style each list item */
+#display li {
+  padding: 15px;
+  margin: 10px;
+  background-color: #f5deb3; /* Light wheat sand color */
+  border: 1px solid #deb887; /* Burlywood border for texture */
+  border-radius: 3px;
+  font-family: "Arial", sans-serif; /* Clean, professional font */
+  font-size: 16px;
+  color: #5c4033; /* Darker brown text for contrast */
+  transition: transform 0.2s ease, background-color 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover effect to mimic shifting sand */
+#display li:hover {
+  transform: translateX(5px); /* Slight shift like blowing sand */
+  background-color: #e4c29a; /* Slightly darker sand tone */
+}
+
+/* Subtle texture for Sandman vibe */
+#display li {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQYV2NkYGD4z8DAwMgABXAG5z8YBAAQZgO8v4aDHAAAAABJRU5ErkJggg=="); /* Tiny noise pattern */
+  background-repeat: repeat;
+}
