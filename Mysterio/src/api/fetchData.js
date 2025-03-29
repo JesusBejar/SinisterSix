@@ -6,7 +6,7 @@ export function FetchData() {
   // return content
   axios
     // send request
-    .get("https://jsonplaceholder.typicode.com/users/1")
+    .get("https://jsonplaceholder.typicode.com/users")
     // get response from url
     .then((response) => console.log(response.data))
     // error handling
