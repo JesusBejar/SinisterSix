@@ -4,15 +4,18 @@ import axios from "axios";
 // make and export  function w/ axios
 export function FetchData() {
   // return content
-  axios
-    // send request
-    .get("https://jsonplaceholder.typicode.com/users")
-    // get response from url
-    .then((response) => console.log(response.data))
-    // error handling
-    .catch((error) => {
-      console.error("Error: ", error);
-    });
+  return (
+    axios
+      // send request
+      .get("https://jsonplaceholder.typicode.com/users")
+      // get response from url
+      // response.data is parsed JSON
+      .then((response) => console.log(response.data))
+      // error handling
+      .catch((error) => {
+        console.error("Error: ", error);
+      })
+  );
 }
 
 // call function within App.jsx
