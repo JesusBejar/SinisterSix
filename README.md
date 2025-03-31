@@ -19,4 +19,10 @@ Six ways to get data from the JSONplaceholder API
 
 ## What I learned
 
-coming soon
+- .then is a gatekeeper for Promise success
+- .innerHTML doesn't append content, it replaces content within an element with new content
+- .textContent is a cooler .innerHTML
+- fetch + async/await is VERY clean and easy to understand
+- don't forget to call async/await function
+- be sure to add a return() always in React components
+- React takes care of all DOM manipulation
