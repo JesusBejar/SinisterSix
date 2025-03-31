@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchData } from "./api/fetchData";
+import "./index.css";
 
 function App() {
   // useState to store user data
