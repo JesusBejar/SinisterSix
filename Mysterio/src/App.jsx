@@ -15,7 +15,18 @@ function App() {
 
   // return user data using jsx
   console.log("users", users);
-  return "";
+  return (
+    <div>
+      <ul>
+        {users.map((user) => (
+          // why is the key prop necessary?
+          <li key={user.id}>
+            {user.name}, {user.email}, {user.address.city}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 export default App;
